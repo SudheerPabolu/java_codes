@@ -5,6 +5,7 @@ public class CheckPrimeNumber {
         if (n <= 1) {
             return false;
         }
+        // checking upto sqrt(n) to optimize
         for (int i = 2; i * i <= n; i++) {
             if (n % i == 0) {
                 return false;
@@ -17,6 +18,7 @@ public class CheckPrimeNumber {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         System.out.println(checkprime(n));
+        sc.close();
     }
 
 }
